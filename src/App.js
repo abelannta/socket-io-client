@@ -18,7 +18,10 @@ function App() {
 
   useEffect(() => {
     socket.current = io(
-      "wss://incredible-mabelle-abelananta-405d7d10.koyeb.app"
+      "wss://incredible-mabelle-abelananta-405d7d10.koyeb.app",
+      {
+        withCredentials: true,
+      }
     );
 
     // ://localhost:9013
