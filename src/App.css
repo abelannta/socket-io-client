@@ -1,0 +1,101 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #c7dfff;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.input-message {
+  width: 100%;
+  padding: 12px;
+}
+
+.btn-send {
+  padding: 12px 32px;
+  background: #4629f2;
+  color: #ffffff;
+}
+
+.chat-wrapper {
+  width: 500px;
+  background-color: #0d082c;
+  height: 712px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 12px;
+}
+
+.chatbox {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  color: #ffffff;
+
+  padding: 10px 15px;
+  background: #1d1748;
+  border-radius: 12px;
+}
+
+.chatbox.current {
+  align-self: flex-end;
+  background: #4629f2;
+}
+
+.username {
+  width: auto;
+}
