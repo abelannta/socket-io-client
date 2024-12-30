@@ -27,9 +27,13 @@ function App() {
     // ://localhost:9013
     // ://incredible-mabelle-abelananta-405d7d10.koyeb.app
 
-    socket.current.on("connnection", () => {
+    socket.current.on("connect", () => {
       console.log("connected to server");
     });
+
+    return () => {
+      socket.current.disconnect(); // Clean up the connection on component unmount
+    };
   }, []);
 
   useEffect(() => {
@@ -49,15 +53,14 @@ function App() {
               className={`chatbox ${
                 socket.current.id === message.user ? "current" : ""
               }`}
+              key={index}
             >
               {socket.current.id !== message.user ? (
                 <div className="username">{message.user}</div>
               ) : (
                 ""
               )}
-              <div key={index} className="message">
-                {message.message}
-              </div>
+              <div className="message">{message.message}</div>
             </div>
           ))}
         </div>
